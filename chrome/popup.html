@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+ <script src="/vue.js"></script>
+ <script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
+   
+    <script src="/firebase.js"></script>
+     <script src="/jquery.js"></script>
+     <script src="/bootstrap.js"></script>
+  
+
+  <link rel="stylesheet" href="/bootstrap.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Daily 321</title>
+
+  <style>
+    body {
+      background-color: #00dbdb;
+      min-width: 400px;
+      min-height: 550px;
+    }
+    
+    label {
+      color: #00646B;
+    }
+    
+    #sizing-addon1 {
+      background-color: #2DB6B6;
+      color: white;
+      border: none;
+    }
+    
+    .input-group {
+      width: 70%;
+    }
+    
+    input {
+      margin: 3px;
+    }
+    
+    #done {
+      background-color: #2DB6B6;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+
+
+
+    <h1 style="color:#00646B">Daily 3,2,1</h1>
+    <br>
+    <div id="app">
+      <label for="gratitude">Things You are Grateful For:</label>
+      <!--<div class="input-group">-->
+      <span class="input-group-addon" id="sizing-addon1">3</span>
+      <form id="form" v-on:submit.prevent="addUser">
+        <input type="text" v-model="newUser.gratitude.gratitude1" class="form-control" id="gratitude" placeholder="For friendship, joy and unicorns">
+
+        <input type="text" v-model="newUser.gratitude.gratitude2" class="form-control" id="gratitude" placeholder="Rainbows and sunshine">
+
+        <input type="text" v-model="newUser.gratitude.gratitude3" class="form-control" id="gratitude" placeholder="Donuts with sprinkles on them">
+
+
+
+
+        <!--</div>-->
+        <br>
+
+        <label for="todo">Things You Want to Do Today:</label>
+        <!--<div class="input-group">-->
+        <span class="input-group-addon" id="sizing-addon1">2</span>
+        <input type="text" v-model="newUser.todo.todo1" class="form-control" id="todo" placeholder="Fly from mountain to mountain">
+        <input type="text" v-model="newUser.todo.todo2" class="form-control" id="todo" placeholder="Be a rockstar">
+
+
+
+        <!--</div>-->
+
+        <br>
+
+        <label for="affirm">Positive Affirmation:</label>
+        <!--<div class="input-group">-->
+        <span class="input-group-addon"   id="sizing-addon1">1</span>
+        <input type="text" v-model="newUser.affirm.affirm1" class="form-control" id="affirm" placeholder="I am a strong, powerful land-mermaid">
+
+
+
+        <!--</div>-->
+        <br>
+        <input class="btn btn-default" id="done" type="submit" value="I'm Done!">
+      </form>
+    </div>
+  </div>
+ 
+  <script src="chrome.js"></script>
+
+
+
+</body>
+
+</html>
